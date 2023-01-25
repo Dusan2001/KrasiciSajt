@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Google Sans Regular";
+}
+
+body {
+    background: #fefefe;
+
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: #001e31;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+
+
+}
+
+#icon {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fefefe;
+    letter-spacing: 1px;
+    
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0,5s;
+    margin: 0;
+    text-decoration: none;
+    margin-top: 15px
+}
+
+.nav-bar ul li a:hover {
+    color: black;
+    background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+    color: #11101b;
+    background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+    header{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #11101b;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 80px auto 0 auto;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+        
+    }
+    .nav-bar.active {
+        height: 450px;
+    
+    }
+    .nav-bar ul {
+        opacity: 1;
+    }
+}
+
+.cover {
+    background-image: url(images/krasici.jpg);
+    background-size: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.cover .text {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 500px;
+}
+
+.cover .text p {
+    text-align: center;
+    font-size: 27px;
+    color: #fefefe;
+    padding-top: 150px;
+
+    animation: transition 3s;
+
+}
+
+@keyframes transition {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+.apartmani {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.slider-wrapper {
+    max-width: 1000px;
+    height: 450px;
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 55px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.slider-wrapper .slider-images {
+	height: 100%;
+}
+
+.slider-wrapper .slider-images img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: none;
+}
+
+.slider-wrapper .slider-images img:first-child {
+	display: block;
+}
+
+.slider-wrapper button {
+    height: 65px;
+    width: 65px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    top: 40%;
+    position: absolute;
+	z-index: 999;
+}
+
+.slider-wrapper button .arrow {
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s ease-out;
+    outline: none;
+}
+
+.slider-wrapper #right-btn {
+    right: 0;
+}
+
+.slider-wrapper #right-btn .arrow {
+    transform: rotate(-45deg);
+}
+
+.slider-wrapper #left-btn {
+    left: 0;
+}
+
+.slider-wrapper #left-btn .arrow {
+    transform: rotate(135deg);
+}
+
+.slika {
+    background-image: url(images/vila.jpg);
+    height: 400px;
+    background-size: cover;
+    margin-top: 70px;
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+.onama {
+    font-size: 20px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+.contactform {
+    background-color: rgb(216, 245, 248);
+}
+
+.contactform .text {
+    text-align: left;
+    margin-top: 85px;
+}
+
+.contactform form {
+    padding: 25px;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.contactform .map {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.contactform form textarea{
+    height: 50px;
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.contactform form input {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.contactform form button {
+    height: 30px;
+    width: 100%;
+    margin-top: 25px;
+    border: none;
+}
+
+footer {
+    background: #001e31;
+    width: 100%;
+    height: 200px;
+    padding: 0 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .foot-bar ul li {
+   display: inline-block;
+}
+
+footer .foot-bar ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fefefe;
+    padding: 15px;
+    font-size: 20px;
+
+}
